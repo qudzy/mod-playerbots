@@ -99,7 +99,7 @@ void SuggestWhatToDoAction::instance()
     placeholders["%role"] = chat->FormatClass(bot, AiFactory::GetPlayerSpecTab(bot));
 
     std::ostringstream itemout;
-    itemout << "|c00b000b0" << allowedInstances[urand(0, allowedInstances.size() - 1)] << "|r";
+    itemout << allowedInstances[urand(0, allowedInstances.size() - 1)];
     placeholders["%instance"] = itemout.str();
 
     spam(sPlayerbotTextMgr->Format("suggest_instance", placeholders));
