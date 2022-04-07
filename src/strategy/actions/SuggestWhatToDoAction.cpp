@@ -102,7 +102,7 @@ void SuggestWhatToDoAction::instance()
     itemout << allowedInstances[urand(0, allowedInstances.size() - 1)];
     placeholders["%instance"] = itemout.str();
 
-    spam(sPlayerbotTextMgr->Format("suggest_instance", placeholders));
+    spam(sPlayerbotTextMgr->Format("suggest_instance", placeholders), 26);
 }
 
 std::vector<uint32> SuggestWhatToDoAction::GetIncompletedQuests()
