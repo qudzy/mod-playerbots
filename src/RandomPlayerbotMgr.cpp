@@ -2070,7 +2070,7 @@ double RandomPlayerbotMgr::GetSellMultiplier(Player* bot)
     uint32 value = GetEventValue(id, "sellmultiplier");
     if (!value)
     {
-        value = urand(80, 250);
+        value = urand(200, 350);
         uint32 validIn = urand(sPlayerbotAIConfig->minRandomBotsPriceChangeInterval, sPlayerbotAIConfig->maxRandomBotsPriceChangeInterval);
         SetEventValue(id, "sellmultiplier", value, validIn);
     }
