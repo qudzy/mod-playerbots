@@ -379,7 +379,7 @@ bool SuggestTradeAction::Execute(Event event)
     placeholders["%item"] = chat->FormatItem(proto, count);
     placeholders["%gold"] = chat->formatMoney(price);
 
-    spam(sPlayerbotTextMgr->Format("suggest_sell", placeholders));
+    spam(sPlayerbotTextMgr->Format("suggest_sell", placeholders), 2);
     return true;
 }
 
