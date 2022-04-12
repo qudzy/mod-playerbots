@@ -221,7 +221,7 @@ void SuggestWhatToDoAction::something()
         return;
 
     std::ostringstream out;
-    out << "|cffb04040" << entry->area_name[0] << "|r";
+    out << entry->area_name[0];
     placeholders["%zone"] = out.str();
 
     spam(sPlayerbotTextMgr->Format("suggest_something", placeholders));
