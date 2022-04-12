@@ -371,8 +371,8 @@ bool SuggestTradeAction::Execute(Event event)
     if (!proto)
         return false;
 
-    uint32 price = proto->SellPrice * sRandomPlayerbotMgr->GetSellMultiplier(bot) * count;
-    if (!price)
+    uint32 price = static_cast<int>(round(proto->SellPrice * sRandomPlayerbotMgr->GetSellMultiplier(bot) * count / 10000)) * 10000;
+    if (!price || price < 10000)
         return false;
 
     std::map<std::string, std::string> placeholders;
