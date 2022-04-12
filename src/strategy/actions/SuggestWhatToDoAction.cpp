@@ -20,6 +20,7 @@ SuggestWhatToDoAction::SuggestWhatToDoAction(PlayerbotAI* botAI, std::string con
     suggestions.push_back(&SuggestWhatToDoAction::specificQuest);
     suggestions.push_back(&SuggestWhatToDoAction::grindReputation);
     suggestions.push_back(&SuggestWhatToDoAction::something);
+    suggestions.push_back(&SuggestWhatToDoAction::pvp);
 }
 
 bool SuggestWhatToDoAction::Execute(Event event)
@@ -224,6 +225,35 @@ void SuggestWhatToDoAction::something()
     placeholders["%zone"] = out.str();
 
     spam(sPlayerbotTextMgr->Format("suggest_something", placeholders));
+}
+
+void SuggestWhatToDoAction::pvp()
+{
+    std::map<std::string, std::string> placeholders;
+    placeholders["%oppositefaction"] = bot->GetFaction();
+
+    AreaTableEntry const* entry = sAreaTableStore.LookupEntry(bot->GetAreaId());
+    if (!entry)
+        return;
+
+    switch (entry->ID)
+    {
+        case AREA_ORGRIMMAR:
+        case AREA_STORMWIND_CITY:
+        case AREA_IRONFORGE:
+        case AREA_THUNDER_BLUFF:
+        case AREA_UNDERCITY:
+        case AREA_DARNASSUS:
+            return;
+        default:
+            break;
+    }
+
+    std::ostringstream out;
+    out << entry->area_name[0];
+    placeholders["%zone"] = out.str();
+
+    spam(sPlayerbotTextMgr->Format("suggest_pvp", placeholders), 22);
 }
 
 void SuggestWhatToDoAction::spam(std::string const msg, uint32 channelId)

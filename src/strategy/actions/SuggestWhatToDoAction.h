@@ -24,6 +24,7 @@ class SuggestWhatToDoAction : public InventoryAction
         void specificQuest();
         void grindReputation();
         void something();
+        void pvp();
         void spam(std::string const msg, uint32 channelId = 1);
 
         std::vector<uint32> GetIncompletedQuests();
@@ -42,4 +43,13 @@ class SuggestTradeAction : public SuggestWhatToDoAction
         bool isUseful() override { return true; }
 };
 
+enum CapitalArea
+{
+    AREA_ORGRIMMAR      = 1637,
+    AREA_STORMWIND_CITY = 1519,
+    AREA_IRONFORGE      = 1537,
+    AREA_THUNDER_BLUFF  = 1638,
+    AREA_UNDERCITY      = 1497,
+    AREA_DARNASSUS      = 1657
+};
 #endif
