@@ -208,7 +208,7 @@ void SuggestWhatToDoAction::grindReputation()
     itemout << allowedFactions[urand(0, allowedFactions.size() - 1)];
     placeholders["%faction"] = itemout.str();
 
-    spam(sPlayerbotTextMgr->Format("suggest_faction", placeholders));
+    spam(sPlayerbotTextMgr->Format("suggest_faction", placeholders), 26);
 }
 
 void SuggestWhatToDoAction::something()
