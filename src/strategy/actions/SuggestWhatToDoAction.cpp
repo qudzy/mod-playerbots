@@ -236,14 +236,14 @@ void SuggestWhatToDoAction::pvp()
     if (!entry)
         return;
 
-    switch (entry->ID)
+    switch (static_cast<CapitalAreaId>(entry->ID))
     {
-        case AREA_ORGRIMMAR:
-        case AREA_STORMWIND_CITY:
-        case AREA_IRONFORGE:
-        case AREA_THUNDER_BLUFF:
-        case AREA_UNDERCITY:
-        case AREA_DARNASSUS:
+        case CapitalAreaId::AREA_ORGRIMMAR:
+        case CapitalAreaId::AREA_STORMWIND_CITY:
+        case CapitalAreaId::AREA_IRONFORGE:
+        case CapitalAreaId::AREA_THUNDER_BLUFF:
+        case CapitalAreaId::AREA_UNDERCITY:
+        case CapitalAreaId::AREA_DARNASSUS:
             return;
         default:
             break;
