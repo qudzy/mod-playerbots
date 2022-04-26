@@ -114,55 +114,55 @@ ChatHelper::ChatHelper(PlayerbotAI* botAI) : PlayerbotAIAware(botAI)
     chats["whisper"] = CHAT_MSG_WHISPER;
     chats["w"] = CHAT_MSG_WHISPER;
 
-    classes[CLASS_DRUID] = "druid";
-    specs[CLASS_DRUID][0] = "balance";
-    specs[CLASS_DRUID][1] = "feral combat";
-    specs[CLASS_DRUID][2] = "restoration";
+    classes[CLASS_DRUID] = "Druid";
+    specs[CLASS_DRUID][0] = "Balance";
+    specs[CLASS_DRUID][1] = "Feral Combat";
+    specs[CLASS_DRUID][2] = "Restoration";
 
-    classes[CLASS_HUNTER] = "hunter";
-    specs[CLASS_HUNTER][0] = "beast mastery";
-    specs[CLASS_HUNTER][1] = "marksmanship";
-    specs[CLASS_HUNTER][2] = "survival";
+    classes[CLASS_HUNTER] = "Hunter";
+    specs[CLASS_HUNTER][0] = "Beast Mastery";
+    specs[CLASS_HUNTER][1] = "Marksmanship";
+    specs[CLASS_HUNTER][2] = "Survival";
 
-    classes[CLASS_MAGE] = "mage";
-    specs[CLASS_MAGE][0] = "arcane";
-    specs[CLASS_MAGE][1] = "fire";
-    specs[CLASS_MAGE][2] = "frost";
+    classes[CLASS_MAGE] = "Mage";
+    specs[CLASS_MAGE][0] = "Arcane";
+    specs[CLASS_MAGE][1] = "Fire";
+    specs[CLASS_MAGE][2] = "Frost";
 
-    classes[CLASS_PALADIN] = "paladin";
-    specs[CLASS_PALADIN][0] = "holy";
-    specs[CLASS_PALADIN][1] = "protection";
-    specs[CLASS_PALADIN][2] = "retribution";
+    classes[CLASS_PALADIN] = "Paladin";
+    specs[CLASS_PALADIN][0] = "Holy";
+    specs[CLASS_PALADIN][1] = "Protection";
+    specs[CLASS_PALADIN][2] = "Retribution";
 
-    classes[CLASS_PRIEST] = "priest";
-    specs[CLASS_PRIEST][0] = "discipline";
-    specs[CLASS_PRIEST][1] = "holy";
-    specs[CLASS_PRIEST][2] = "shadow";
+    classes[CLASS_PRIEST] = "Priest";
+    specs[CLASS_PRIEST][0] = "Discipline";
+    specs[CLASS_PRIEST][1] = "Holy";
+    specs[CLASS_PRIEST][2] = "Shadow";
 
-    classes[CLASS_ROGUE] = "rogue";
-    specs[CLASS_ROGUE][0] = "assasination";
-    specs[CLASS_ROGUE][1] = "combat";
-    specs[CLASS_ROGUE][2] = "subtlety";
+    classes[CLASS_ROGUE] = "Rogue";
+    specs[CLASS_ROGUE][0] = "Assassination";
+    specs[CLASS_ROGUE][1] = "Combat";
+    specs[CLASS_ROGUE][2] = "Subtlety";
 
-    classes[CLASS_SHAMAN] = "shaman";
-    specs[CLASS_SHAMAN][0] = "elemental";
-    specs[CLASS_SHAMAN][1] = "enhancement";
-    specs[CLASS_SHAMAN][2] = "restoration";
+    classes[CLASS_SHAMAN] = "Shaman";
+    specs[CLASS_SHAMAN][0] = "Elemental";
+    specs[CLASS_SHAMAN][1] = "Enhancement";
+    specs[CLASS_SHAMAN][2] = "Restoration";
 
-    classes[CLASS_WARLOCK] = "warlock";
-    specs[CLASS_WARLOCK][0] = "affliction";
-    specs[CLASS_WARLOCK][1] = "demonology";
-    specs[CLASS_WARLOCK][2] = "destruction";
+    classes[CLASS_WARLOCK] = "Warlock";
+    specs[CLASS_WARLOCK][0] = "Affliction";
+    specs[CLASS_WARLOCK][1] = "Demonology";
+    specs[CLASS_WARLOCK][2] = "Destruction";
 
-    classes[CLASS_WARRIOR] = "warrior";
-    specs[CLASS_WARRIOR][0] = "arms";
-    specs[CLASS_WARRIOR][1] = "fury";
-    specs[CLASS_WARRIOR][2] = "protection";
+    classes[CLASS_WARRIOR] = "Warrior";
+    specs[CLASS_WARRIOR][0] = "Arms";
+    specs[CLASS_WARRIOR][1] = "Fury";
+    specs[CLASS_WARRIOR][2] = "Protection";
 
-    classes[CLASS_DEATH_KNIGHT] = "dk";
-    specs[CLASS_DEATH_KNIGHT][0] = "blood";
-    specs[CLASS_DEATH_KNIGHT][1] = "frost";
-    specs[CLASS_DEATH_KNIGHT][2] = "unholy";
+    classes[CLASS_DEATH_KNIGHT] = "Death Knight";
+    specs[CLASS_DEATH_KNIGHT][0] = "Blood";
+    specs[CLASS_DEATH_KNIGHT][1] = "Frost";
+    specs[CLASS_DEATH_KNIGHT][2] = "Unholy";
 
     races[RACE_DWARF] = "Dwarf";
     races[RACE_GNOME] = "Gnome";
