@@ -9,6 +9,14 @@
 
 class PlayerbotAI;
 
+enum class ChatChannelId : uint32
+{
+    CHAT_GENERAL           = 1,
+    CHAT_TRADE             = 2,
+    CHAT_LOCAL_DEFENCE     = 22,
+    CHAT_LOOKING_FOR_GROUP = 26,
+};
+
 enum class CapitalAreaId : uint32
 {
     AREA_ORGRIMMAR      = 1637,
@@ -35,7 +43,8 @@ class SuggestWhatToDoAction : public InventoryAction
         void grindReputation();
         void something();
         void pvp();
-        void spam(std::string const msg, uint32 channelId = 1);
+        void spam(std::string const msg, ChatChannelId channelId =
+            ChatChannelId::CHAT_GENERAL);
 
         std::vector<uint32> GetIncompletedQuests();
 

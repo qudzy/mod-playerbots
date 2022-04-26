@@ -208,7 +208,8 @@ void SuggestWhatToDoAction::grindReputation()
     itemout << allowedFactions[urand(0, allowedFactions.size() - 1)];
     placeholders["%faction"] = itemout.str();
 
-    spam(sPlayerbotTextMgr->Format("suggest_faction", placeholders), 26);
+    spam(sPlayerbotTextMgr->Format("suggest_faction", placeholders),
+        ChatChannelId::CHAT_LOOKING_FOR_GROUP);
 }
 
 void SuggestWhatToDoAction::something()
@@ -253,16 +254,17 @@ void SuggestWhatToDoAction::pvp()
     out << entry->area_name[0];
     placeholders["%zone"] = out.str();
 
-    spam(sPlayerbotTextMgr->Format("suggest_pvp", placeholders), 22);
+    spam(sPlayerbotTextMgr->Format("suggest_pvp", placeholders),
+        ChatChannelId::CHAT_LOCAL_DEFENCE);
 }
 
-void SuggestWhatToDoAction::spam(std::string const msg, uint32 channelId)
+void SuggestWhatToDoAction::spam(std::string const msg, ChatChannelId channelId)
 {
     std::set<std::string> said;
     for (uint32 i = 0; i < sChatChannelsStore.GetNumRows(); ++i)
     {
         ChatChannelsEntry const* channel = sChatChannelsStore.LookupEntry(i);
-        if (!channel || channel->ChannelID != channelId) continue;
+        if (!channel || channel->ChannelID != static_cast<uint32>(channelId)) continue;
 
         for (AreaTableEntry const* area : sAreaTableStore)
         {
@@ -379,7 +381,7 @@ bool SuggestTradeAction::Execute(Event event)
     placeholders["%item"] = chat->FormatItem(proto, count);
     placeholders["%gold"] = chat->formatMoney(price);
 
-    spam(sPlayerbotTextMgr->Format("suggest_sell", placeholders), 2);
+    spam(sPlayerbotTextMgr->Format("suggest_sell", placeholders), ChatChannelId::CHAT_TRADE);
     return true;
 }
 
