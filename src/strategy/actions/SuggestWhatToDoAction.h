@@ -38,13 +38,15 @@ class SuggestWhatToDoAction : public InventoryAction
     protected:
         typedef void (SuggestWhatToDoAction::*Suggestion)();
         std::vector<Suggestion> suggestions;
-        void instance();
         void specificQuest();
         void grindReputation();
         void something();
         void pvp();
-        void spam(std::string const msg, ChatChannelId channelId =
-            ChatChannelId::CHAT_GENERAL);
+        void spam(
+            std::string msg,
+            ChatChannelId channelId = ChatChannelId::CHAT_GENERAL,
+            bool const isLowerCase = false
+        );
 
         std::vector<uint32> GetIncompletedQuests();
 
